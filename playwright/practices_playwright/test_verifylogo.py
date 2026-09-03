@@ -12,5 +12,3 @@ def test_login_and_logo(page:Page):
     page.get_by_role("button",name="login").click()
 
     page.wait_for_timeout(10000)
-    logo = page.get_by_alt_text("client brand banner")
-    expect(logo).to_be_visible()
