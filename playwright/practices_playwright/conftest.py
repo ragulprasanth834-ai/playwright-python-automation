@@ -11,3 +11,8 @@ def practice_page1(page:Page):
 def orangehrm(page:Page):
     page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
     return page
+
+@pytest.fixture
+def assertqa(page:Page):
+    page.goto("https://assertqa.com/practice/webtables?utm_source=chatgpt.com")
+    return page
