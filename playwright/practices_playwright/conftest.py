@@ -19,3 +19,7 @@ def assertqa(page:Page):
 def practiceplaywright(page:Page):
     page.goto("https://testautomationpractice.blogspot.com/p/playwrightpractice.html")
     return page
+@pytest.fixture
+def qaplayground(page:Page):
+    page.goto("https://qaplayground.com/practice/date-picker?utm_source=chatgpt.com")
+    return page
