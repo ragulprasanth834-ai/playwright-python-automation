@@ -27,3 +27,7 @@ def qaplayground(page:Page):
 def demowebshop(page:Page):
     page.goto("https://demowebshop.tricentis.com/")
     return page
+@pytest.fixture
+def demowebshoploginpage(page:Page):
+    page.goto("https://demowebshop.tricentis.com/login")
+    return page
