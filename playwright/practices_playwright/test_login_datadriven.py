@@ -8,11 +8,11 @@ login_test_data = [
 ]
 
 @pytest.mark.parametrize("email,password,validity", login_test_data)
-def test_logindatadriven(email, password, validity, demowebshoploginpage: Page):
+def test_logindatadriven(email, password, validity, demowebshoploginpage: Page):# type: ignore
 
     # Fill the login form
-    demowebshoploginpage.locator("#Email").fill(email)
-    demowebshoploginpage.locator("#Password").fill(password)
+    demowebshoploginpage.locator("#Email").fill(email)# type: ignore
+    demowebshoploginpage.locator("#Password").fill(password)# type: ignore
     demowebshoploginpage.locator("input[value='Log in']").click()
 
     # Validation
