@@ -7,7 +7,7 @@ from pages.base_page import BasePage
 class DashboardPage(BasePage):
     def __init__(self, page: Page):
         super().__init__(page)
-        self.header = page.locator(".oxd-topbar-header-breadcrumb h6")
+        self.header = page.locator(".oxd-topbar-header-breadcrumb h6").first
         self.user_dropdown = page.locator(".oxd-userdropdown-tab")
         self.logout_link = page.get_by_role("menuitem", name="Logout")
         self.sidebar_menu_item = lambda name: page.get_by_role("link", name=name)

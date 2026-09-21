@@ -30,9 +30,10 @@ def context(browser):
 @pytest.fixture(scope="function")
 def page(context):
     page = context.new_page()
+    page.set_default_timeout(60000)
+    page.set_default_navigation_timeout(60000)
     yield page
     page.close()
-
 
 @pytest.fixture(scope="function")
 def logged_in_page(page):

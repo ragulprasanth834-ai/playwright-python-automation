@@ -1,4 +1,4 @@
-```python
+
 import time
 
 import pytest
@@ -52,4 +52,4 @@ def test_search_employee_by_name(logged_in_page):
 
     # Verify the expected employee is present in the results
     pim_page.expect_employee_in_results(full_name)
-```
+

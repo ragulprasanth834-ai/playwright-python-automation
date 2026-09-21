@@ -20,9 +20,7 @@ class PimPage(BasePage):
         )
 
         # Employee search
-        self.search_employee_name = page.get_by_placeholder(
-            "Type for hints..."
-        )
+        self.search_employee_name = (page.locator(".oxd-input-group").filter(has_text="Employee Name").get_by_placeholder("Type for hints..."))
         self.search_button = page.get_by_role("button", name="Search")
         self.employee_table_rows = page.locator(".oxd-table-card")
 
